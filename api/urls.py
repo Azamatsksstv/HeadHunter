@@ -12,7 +12,7 @@ router.register('vacancies', views.VacancyViewSet)
 urlpatterns = [
     path('companies/<int:pk>/vacancies/', views.CompanyVacancyList.as_view({'get': 'list'})),
     path('vacancies/top_ten/', views.TopTenVacanciesView.as_view()),
-    # path('vacancies/<int:id>/submit/', )
+    path('vacancies/<int:id>/submit/', views.SubmitVacancyList.as_view({'get': 'list'})),
 ]
 
 urlpatterns += router.urls
